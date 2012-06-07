@@ -1,0 +1,214 @@
+/********************************
+     VARIABLES, COLORS 
+********************************/
+
+$htmlBackground: black;
+$titleBackgrund: #444;
+$colorBasic: green;
+$colorHighlight: GreenYellow;
+$textShadowTitle: #222;
+$buttonBackground: #999;
+$buttonBorder: #777;
+$buttonBorderHover: #333;
+$buttonShadowActive: GreenYellow;
+
+
+/********************************
+     GENERAL 
+********************************/
+
+html {
+   overflow-y: scroll;
+   background-color: $htmlBackground;
+   color: HoneyDew;
+}
+
+body {
+   padding-top: 60px;
+}
+
+.center {
+   text-align: center;
+}
+
+h1 {
+   margin-bottom: 10px;
+   background: $titleBackgrund;
+   padding-top: 15px;
+   padding-bottom: 20px;
+   border-top: 1px dotted $colorHighlight;
+}
+
+a {
+   color: $colorBasic;
+   text-decoration: none;
+   
+   &:visited {
+      color: $colorHighlight;
+   }
+}
+
+div#wrapper {
+   margin: 0px auto;
+   width: 1200px;
+}
+
+/********************************
+     TYPOGRAPHIE 
+********************************/
+
+body {
+   font-family: 'Abel', sans-serif;
+   font-size: 15px;
+   letter-spacing: 1;
+}
+
+h1, #logo {
+   font-family: 'Press Start 2P', cursive;
+   color: $colorBasic;
+}
+
+/********************************
+     HEADER & NAVIGATION 
+********************************/
+
+header#head_nav_wrap {
+
+}
+
+div#head_nav {
+}
+
+div#head {
+   margin-left: 15px;
+   float: left;
+}
+
+#logo {
+   text-decoration: none;
+
+   &:hover {
+      color: $colorHighlight;
+   }
+}
+
+nav#nav {
+   float: right;
+}
+
+ul#nav_list_top {
+
+   li {
+
+   }
+}
+
+ul.nav_list {
+   list-style-type:none;
+   margin:0;
+   padding:0;
+
+   li {
+      display: inline;
+      margin-right: 15px;
+      padding: 0 5px;
+
+      &:hover {
+         background-color: gray;
+      }
+   }
+}
+
+h1.title {
+   clear: both;
+   text-shadow: 1px 1px 2px $textShadowTitle;
+   filter: dropshadow(color=$textShadowTitle, offx=1, offy=1);
+        
+}
+
+/********************************
+    BUTTONS 
+********************************/
+
+.button1 {
+   /* Found in /home */
+
+   background-color: $buttonBackground;
+   -moz-border-radius: 15px;
+   -webkit-border-radius: 15px;
+   border-radius: 15px;
+   border: 2px solid $buttonBorder;
+   padding: 10px 15px;
+   text-decoration: none;
+   color: $colorHighlight;
+   text-align: center;
+   font-weight: bold;
+
+   &:active {
+      -webkit-box-shadow: 4px 4px 8px $buttonShadowActive;
+      box-shadow: 4px 4px 8px $buttonShadowActive;
+      color: $colorHighlight;
+   }
+   &:hover {
+      border-color: $buttonBorderHover;  
+      color: $colorHighlight;
+   }
+   &:visited {
+      color: $colorHighlight;
+      font-weight: normal;
+   }
+}
+
+.sign_up_button {
+   padding: 15px;
+}
+
+/********************************
+     FOOTER 
+********************************/
+
+#footer {
+   border-bottom: 1px dotted $colorHighlight;
+   background-color: $titleBackgrund;
+}
+
+p#small_footer {
+   padding: 0 0 0 15px;
+   margin: 0;
+   font-size: 0.9em;
+   color: $colorBasic;
+   float: left;
+}
+
+ul#nav_list_bottom {
+   float: right;
+   li {
+   padding-top: 0;
+   margin-top: 0;
+   font-size: 0.9em;
+   }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
