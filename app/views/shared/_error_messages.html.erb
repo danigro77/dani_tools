@@ -1,9 +1,12 @@
 <% if target.errors.any? %>
    <div class="error_messages">
-      <ul>
-         <% target.errors.full_messages.each do |msg| %>
-            <li><%= msg %></li>
-         <% end %>
-      </ul>
+      <div class="alert alert-error form_message">
+         <%= "MyCollection: tools$ #{yield(:footer_title)} #{pluralize(@user.errors.count, "ERROR").upcase}" %>
+         <ul>
+            <% target.errors.full_messages.each do |msg| %>
+               <li>>> <%= msg %></li>
+            <% end %>
+         </ul>
+      </div>
    </div>
 <% end %>

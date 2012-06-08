@@ -289,17 +289,6 @@ label {
    font-size: 1.2em;
 }
 
-/********************************   
-      ERROR FILLOUT FORM 
-********************************/
-
-div.error_messages {
-   color: $colorError;
-   ul {
-      list-style: none;
-   }
-}
-
 
 /********************************
      FLASH MESSAGES
@@ -308,27 +297,44 @@ div.error_messages {
 div.alert {
    background: $titleBackgrund;
    font-size: 1.2em;
-   width: 837px;
-   height: 40px;
-   margin: 0 15px 0 316px;
    padding: 15px;
 }
 
-div.container {
+div#flash_messages {
+   width: 837px;
+   margin: 0 15px 0 316px;
+}
 
-   div.alert-error {
-      color: $colorError;
-   }
+div.form_message {
+   width: 550px;
+   margin: 0 auto 20px auto;
+}
 
-   div.alert-success {
-      color: $colorBasic;
-   }
+div.alert-error {
+   color: $colorError;
+}
 
-   div.alert-notice {
-      color: $colorHighlight;
+div.alert-success {
+   color: $colorBasic;
+}
+
+div.alert-notice {
+   color: $colorHighlight;
+}
+
+div.error_messages {
+   color: $colorError;
+   ul {
+      list-style: none;
+      padding: 0;
+      margin-top: 0;
+      margin-bottom: 0;
    }
 }
 
+/********************************   
+      
+********************************/
 
 
 

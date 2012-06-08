@@ -3,11 +3,12 @@
 <% provide(:footer_title, "sign_up_please") %>
 
 
+<%= render 'shared/error_messages', :target => @user %>
+
 <div class="form" id="sign_up_for">
 
    <%= form_for(@user) do |f| %>
    
-      <%= render 'shared/error_messages', :target => @user %>
 
       <%= f.label :name %><br />
       <%= f.text_field :name %><br />
