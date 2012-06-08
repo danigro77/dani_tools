@@ -1,0 +1,18 @@
+<% provide(:title, "#{@user.name}'s Tools") %>
+<% provide(:h1_title, "#{@user.name}'s Tools") %>
+<% provide(:footer_title, "#{@user.name.downcase}s_tools") %>
+
+<div id="user_left">
+   <p id="user_picture"><%= gravatar_for @user %></p>
+   <p id="user_name"><%= @user.name %></p>
+</div>
+
+<div id="user_right">
+   <p>
+      Cras auctor tortor feugiat augue aliquet mollis. Nam ullamcorper mi et odio porta posuere. Nam consequat egestas metus, et dignissim purus eleifend at. Nunc quis eros at lectus imperdiet dignissim quis sit amet magna. Aliquam erat volutpat. Aenean accumsan imperdiet tincidunt. Vestibulum facilisis auctor nisl, ut fermentum leo scelerisque a. Nulla euismod lorem lacus, eu vehicula metus. Maecenas eget nisl ut ipsum consequat luctus vitae ultricies eros. Vivamus condimentum ultrices ante ut elementum.
+   </p>
+   <p>
+      Curabitur dapibus lorem nec lacus scelerisque in posuere quam pharetra. Mauris a tellus a massa dictum porta at vitae lorem. Donec ac lectus ac sapien congue gravida. In hac habitasse platea dictumst. Nam at urna eu sem pellentesque facilisis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse potenti. Donec sed est vitae nunc vehicula imperdiet at quis risus. Curabitur quis sapien mi, et molestie velit. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Suspendisse auctor ipsum ac nunc pulvinar aliquet. In euismod metus id metus rhoncus facilisis.
+   </p>
+</div>
+

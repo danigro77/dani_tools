@@ -1,5 +1,11 @@
-<footer id="footer">
-   <p id="small_footer">by Daniela Grossmann, San Francisco, 2012<p>
+<footer id="footer_wrapper">
+   <div id="footer">
+      <p id="terminal">
+         <%= "MyCollection: tools$ #{yield(:footer_title)}" %><br />
+         <%= "MyCollection: tools$ " %><span id="cursor"></span>
+      </p>
+   </div>
+   <div id="small_footer">by Daniela Grossmann, San Francisco, 2012</div>
    <nav>
       <ul id="nav_list_bottom" class="nav_list">
          <li><%= link_to "About",      about_path   %></li>

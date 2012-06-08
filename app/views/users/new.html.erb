@@ -1,4 +1,30 @@
 <% provide(:title, 'Sign up') %>
+<% provide(:h1_title, "Sign up") %>
+<% provide(:footer_title, "sign_up_please") %>
 
-<h1 class="center title">Sign up</h1>
-<p>Find me in app/views/users/new.html.erb</p>
+
+<div class="form" id="sign_up_for">
+
+   <%= form_for(@user) do |f| %>
+   
+      <%= render 'shared/error_messages', :target => @user %>
+
+      <%= f.label :name %><br />
+      <%= f.text_field :name %><br />
+
+      <%= f.label :email %><br />
+      <%= f.text_field :email %><br />
+
+      <%= f.label :password %><br />
+      <%= f.password_field :password %><br />
+
+      <%= f.label :password_confirmation, "Confirmation" %><br />
+      <%= f.password_field :password_confirmation %><br /><br />
+
+      <%= f.submit "Create my account", class: "button1" %>
+
+   <% end %>
+
+</div>
+
+

@@ -1,7 +1,7 @@
 <header id="head_nav_wrap">
    <div id="head_nav">
       <div id="head">
-         <%= link_to "Dani's Tools", '#', id: "logo" %>
+         <%= link_to "My Tools Collection", root_path, id: "logo" %>
    </div>
       <nav id="nav">
          <ul id="nav_list_top" class="nav_list">
@@ -11,5 +11,6 @@
          </ul>
       </nav>
    </div>
+   <h1 class="center title"><%= yield(:h1_title) %></h1>
 </header>
 

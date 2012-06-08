@@ -6,12 +6,13 @@ $htmlBackground: black;
 $titleBackgrund: #444;
 $colorBasic: green;
 $colorHighlight: GreenYellow;
+$colorError: DarkOrange;
 $textShadowTitle: #222;
 $buttonBackground: #999;
 $buttonBorder: #777;
 $buttonBorderHover: #333;
 $buttonShadowActive: GreenYellow;
-
+$basicFontColor: HoneyDew;
 
 /********************************
      GENERAL 
@@ -20,11 +21,11 @@ $buttonShadowActive: GreenYellow;
 html {
    overflow-y: scroll;
    background-color: $htmlBackground;
-   color: HoneyDew;
 }
 
 body {
    padding-top: 60px;
+   color: $basicFontColor;
 }
 
 .center {
@@ -34,8 +35,7 @@ body {
 h1 {
    margin-bottom: 10px;
    background: $titleBackgrund;
-   padding-top: 15px;
-   padding-bottom: 20px;
+   padding: 15px 15px 20px 15px;
    border-top: 1px dotted $colorHighlight;
 }
 
@@ -53,6 +53,12 @@ div#wrapper {
    width: 1200px;
 }
 
+div.container {
+   clear: both;
+   margin: 30px 15px;
+ 
+}
+
 /********************************
      TYPOGRAPHIE 
 ********************************/
@@ -60,13 +66,19 @@ div#wrapper {
 body {
    font-family: 'Abel', sans-serif;
    font-size: 15px;
-   letter-spacing: 1;
+   letter-spacing: 0.6px;
 }
 
 h1, #logo {
    font-family: 'Press Start 2P', cursive;
    color: $colorBasic;
 }
+
+#terminal, div.alert {
+   font-family: 'Lekton', sans-serif;
+   letter-spacing: 1px;
+}
+
 
 /********************************
      HEADER & NAVIGATION 
@@ -166,37 +178,156 @@ h1.title {
 /********************************
      FOOTER 
 ********************************/
-
-#footer {
-   border-bottom: 1px dotted $colorHighlight;
-   background-color: $titleBackgrund;
+#footer_wrapper {
+   margin-bottom: 30px;
 }
 
-p#small_footer {
-   padding: 0 0 0 15px;
+#footer {
+   clear: both;
+   border-bottom: 1px dotted $colorHighlight;
+   background-color: $titleBackgrund;
+   width: 100%;
+   height: 30px;
+}
+
+div#small_footer {
+   padding: 0 15px;
    margin: 0;
    font-size: 0.9em;
    color: $colorBasic;
    float: left;
+   width: 300px;
 }
 
 ul#nav_list_bottom {
    float: right;
-   li {
    padding-top: 0;
    margin-top: 0;
-   font-size: 0.9em;
+   li {
+      font-size: 0.9em;
+   }
+}
+
+#terminal {
+   color: $colorBasic;
+   font-size: 0.8em;
+   padding: 3px 15px;
+}   
+
+span#cursor {
+   width: 5px;
+   height: 5px;
+   background: $htmlBackground;
+   border: 1px solid $htmlBackground;
+}
+
+/********************************
+    MISCELLANEOUS 
+********************************/
+
+.debug_dumb {
+   clear: both;
+   width: 100%;
+   margin-top: 85px;
+}
+
+
+/********************************
+    USER PAGE 
+********************************/
+
+div#user_left {
+   float: left;
+   width: 300px;
+   padding-right: 5px;
+}
+
+.gravatar {
+   float: left;
+   width: 40px;
+}
+
+p#user_name {
+   float: left;
+   font-size: 1em;
+   font-family: 'Press Start 2P', cursive;
+   color: $colorBasic;
+   margin-left: 5px;
+}
+
+div#user_right {
+   float: left;
+   width: 830px;
+   p {
+      border-left: 1px dotted $colorHighlight;
+      padding: 15px;
    }
 }
 
 
+/********************************
+    SIGNUP FORMS
+********************************/
+
+div.form {
+   margin: 0 auto;
+   width: 300px;
+}
+
+input, textarea {
+   color: $colorHighlight;
+   font-size: 1.2em;
+   background: $titleBackgrund;
+   padding: 5px;
+   font-family: 'Lekton', sans-serif;
+   margin-left: 40px;
+   width: 250px;
+}
+
+label {
+   color: $colorBasic;
+   font-size: 1.2em;
+}
+
+/********************************   
+      ERROR FILLOUT FORM 
+********************************/
+
+div.error_messages {
+   color: $colorError;
+   ul {
+      list-style: none;
+   }
+}
 
 
+/********************************
+     FLASH MESSAGES
+********************************/
 
+div.alert {
+   background: $titleBackgrund;
+   font-size: 1.2em;
+   width: 837px;
+   height: 40px;
+   margin: 0 15px 0 316px;
+   padding: 15px;
+}
 
+div.container {
 
+   div.alert-error {
+      color: $colorError;
+   }
 
+   div.alert-success {
+      color: $colorBasic;
+   }
 
+   div.alert-notice {
+      color: $colorHighlight;
+   }
+}
 
 
 
