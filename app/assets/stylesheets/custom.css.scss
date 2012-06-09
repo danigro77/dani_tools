@@ -142,6 +142,11 @@ h1.title {
     BUTTONS 
 ********************************/
 
+div.button_center {
+   width: 100px;
+   margin: 0 auto;
+}
+
 .button1 {
    /* Found in /home */
 
@@ -150,11 +155,11 @@ h1.title {
    -webkit-border-radius: 15px;
    border-radius: 15px;
    border: 2px solid $buttonBorder;
-   padding: 10px 15px;
+   padding: 7px 15px;
    text-decoration: none;
    color: $colorHighlight;
    text-align: center;
-   font-weight: bold;
+   margin: 15px 0;
 
    &:active {
       -webkit-box-shadow: 4px 4px 8px $buttonShadowActive;
@@ -172,8 +177,14 @@ h1.title {
 }
 
 .sign_up_button {
-   padding: 15px;
+   width: 200px;
 }
+
+.sign_in_button {
+   width: 100px;
+}
+
+
 
 /********************************
      FOOTER 
@@ -270,8 +281,6 @@ div#user_right {
 ********************************/
 
 div.form {
-   margin: 0 auto;
-   width: 300px;
 }
 
 input, textarea {
@@ -280,13 +289,13 @@ input, textarea {
    background: $titleBackgrund;
    padding: 5px;
    font-family: 'Lekton', sans-serif;
-   margin-left: 40px;
    width: 250px;
 }
 
 label {
    color: $colorBasic;
    font-size: 1.2em;
+   margin-top: 10px;
 }
 
 
@@ -301,8 +310,8 @@ div.alert {
 }
 
 div#flash_messages {
-   width: 837px;
-   margin: 0 15px 0 316px;
+   width: 1200px;
+   margin-top: -15px;
 }
 
 div.form_message {
