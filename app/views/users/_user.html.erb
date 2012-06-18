@@ -1,0 +1,13 @@
+<li>
+   <%= gravatar_for user %>
+   <div class="index_name index"><%= link_to user.name, user %></div>
+
+   <% if current_user.admin? %>
+      <div class="index_mail index"><%= mail_to(user.email, image_tag("mail.png")) %></div>
+      <div class="index_created index"><%= user.created_at.strftime("%Y-%m-%d") %></div>
+      <div class="index_updated index"><%= user.updated_at.strftime("%Y-%m-%d") %></div>
+   <% end %>
+   <% if current_user.admin? && !current_user?(user) %>
+      <div class="index_delete index"><%= link_to "delete", user, method: :delete, data: { confirm: "Are you sure?" } %></div>
+   <% end %>
+</li>

@@ -3,6 +3,9 @@ source 'https://rubygems.org'
 gem 'rails',               '3.2.5'
 gem 'bootstrap-sass',      '2.0.0'
 gem 'bcrypt-ruby',         '3.0.1'
+gem 'faker',               '1.0.1'
+gem 'will_paginate',       '3.0.3'
+# gem 'thinking-sphinx',     '2.0.10'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'

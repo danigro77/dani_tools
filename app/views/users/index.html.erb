@@ -1,0 +1,17 @@
+<% provide(:title, "All users") %>
+<% provide(:h1_title, "All users") %>
+<% provide(:footer_title, "all_users") %>
+
+<div id="index_head">
+   <%= will_paginate @users %>
+   <% if current_user.admin? %>
+      <p id="head_created">User since:</p>
+      <p id="head_updated">Last update:</p>
+   <% end %>
+</div>
+
+<ul class="users">
+   <%= render @users %>
+</ul>
+
+<%= will_paginate @users %>

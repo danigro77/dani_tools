@@ -9,8 +9,8 @@
             <li><%= link_to "Help",       help_path %></li>
 
             <% if signed_in? %>
-               <li><%= link_to "Profile",    current_user %></li>
-               <li><%= link_to "Settings",   "#" %></li> 
+               <li><%= link_to "My Tools",   current_user %></li>
+               <li><%= link_to "Settings",   edit_user_path(current_user) %></li> 
                <li><%= link_to "Sign out",   signout_path,  method: "delete" %></li>
             <% else %>
                <li><%= link_to "Sign in",    signin_path %></li>
@@ -19,5 +19,15 @@
       </nav>
    </div>
    <h1 class="center title"><%= yield(:h1_title) %></h1>
+
+   <% if signed_in? && current_user.admin? %>
+      <nav id=nav_admin>
+         <ul id="nav_list_admin" class="nav_list">
+            <li><%= link_to "Edit Categories",  "#" %></li>
+            <li><%= link_to "Edit Tools",       "#" %></li>
+            <li><%= link_to "Edit Users",       users_path %></li>
+         </ul>
+      </nav>
+   <% end %>
 </header>
 
